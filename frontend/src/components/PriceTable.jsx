@@ -2,7 +2,7 @@ import { useVehicles } from "../context/VehicleContext";
 
 export default function PriceTable() {
     const { vehicles, loading, error } = useVehicles();
-    const formatVND = (val) => val ? new Intl.NumberFormat('vi-VN').format(val) + " VND" : "---";
+    const formatVND = (val) => val ? new Intl.NumberFormat('vi-VN').format(val) + " VND" : "Liên hệ crd";
     if (loading) return <div className="text-center p-10">Đang tải dữ liệu...</div>;
     if (error) return <div className="text-center p-10 text-red-500">{error}</div>;
     return (
